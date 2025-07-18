@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import API_URL from "./config";
+import Image_Url from "./image";
 function Profile(){
     const [profile,setProfile]=useState(null)
     const token = localStorage.getItem("token");
@@ -77,7 +78,7 @@ function Profile(){
                         <div className="d-flex align-items-center">
                             <div className="me-3 d-flex align-items-center justify-content-center rounded overflow-hidden border" style={{ width: "130px", height: "90px" }}>
                                 <img
-                                    src={`${API_URL}/${profile.profileImage}`}
+                                    src={`${Image_Url}/${profile.profileImage}`}
                                     className="img-fluid"
                                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                 />

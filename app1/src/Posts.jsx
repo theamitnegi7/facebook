@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import API_URL from "./config";
+import Image_Url from "./image";
 function Posts(){
     const [posts,setPosts]=useState([]);
     const[total,setTotal]=useState(0);
@@ -43,7 +44,7 @@ function Posts(){
                     >
                    <img
                         //  src={`/login/${post.post}`}
-                        src={`${API_URL}/${post.post}`}
+                        src={`${Image_Url}/${post.post}`}
                         className="card-img-top"
                         alt="Post"
                         style={{ maxWidth: "600px", maxHeight: "600px", objectFit: "cover" }}
