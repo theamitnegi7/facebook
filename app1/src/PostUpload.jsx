@@ -16,7 +16,7 @@ const PostUpload = () => {
     formData.append("caption", postCaption);
     formData.append("token", token);
 
-    fetch(`${API_Url}/postSave`, {
+    fetch(`${API_URL}/postSave`, {
       method: "POST",
       body: formData
     })

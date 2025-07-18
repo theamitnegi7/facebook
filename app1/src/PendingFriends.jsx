@@ -34,7 +34,7 @@ const PendingFriends = () => {
   const acceptRequest = async (id) => {
     console.log("accept button");
     try {
-      const res = await fetch(`${API_Url}/acceptRequest`, {
+      const res = await fetch(`${API_URL}/acceptRequest`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),
@@ -53,7 +53,7 @@ const PendingFriends = () => {
   const rejectRequest = async (id) => {
     console.log("reject button");
     try {
-      const res = await fetch(`${API_Url}/rejectRequest`, {
+      const res = await fetch(`${API_URL}/rejectRequest`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),

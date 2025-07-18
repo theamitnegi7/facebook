@@ -6,7 +6,7 @@ function Profile(){
     const [showModal, setShowModal] = useState(false);
 
     function fetchProfile(){
-        fetch(`${API_Url}/profile`,{
+        fetch(`${API_URL}/profile`,{
             method:"Post",
             headers:{ "Content-Type": "application/json"},
             body:JSON.stringify({token})
@@ -30,7 +30,7 @@ function Profile(){
     }
 
     try {
-        fetch(`${API_Url}/update`, {
+        fetch(`${API_URL}/update`, {
             method: "POST",
             body: formData
         })
@@ -77,7 +77,7 @@ function Profile(){
                         <div className="d-flex align-items-center">
                             <div className="me-3 d-flex align-items-center justify-content-center rounded overflow-hidden border" style={{ width: "130px", height: "90px" }}>
                                 <img
-                                    src={`${API_Url}/${profile.profileImage}`}
+                                    src={`${API_URL}/${profile.profileImage}`}
                                     className="img-fluid"
                                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                 />
