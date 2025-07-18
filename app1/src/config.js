@@ -1,2 +1,2 @@
-const API_URL= "https://f6336xng-8000.inc1.devtunnels.ms"
+const API_URL= "http://34.131.187.230/api"
 export default API_URL;
