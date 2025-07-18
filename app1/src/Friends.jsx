@@ -4,7 +4,7 @@ function Friends(){
     function fetchFriends(){
         const token=localStorage.getItem("token");
 
-        fetch("http://localhost:8000/allFriends", {
+        fetch(`${API_URL}/allFriends`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ token }),

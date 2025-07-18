@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import API_URL from './config';
+
+
 const FriendRequest = () => {
   const [remail, setRemail] = useState('');
 
@@ -9,7 +12,7 @@ const FriendRequest = () => {
     const token = localStorage.getItem('token');
     const data = { remail, token };
 
-    fetch("http://localhost:8000/sendRequest", {
+    fetch(`${API_URL}/sendRequest`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)

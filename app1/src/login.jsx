@@ -1,5 +1,5 @@
 import loginImage from './istockphoto-1195415965-170667a.jpg'; 
-
+import API_URL from './config';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
@@ -16,7 +16,7 @@ function Login() {
     const lpassword=e.target.lpassword.value;
     const data={email:lemail, pass:lpassword};
     try {
-        fetch("http://localhost:8000/login", {
+        fetch(`${API_URL}/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
@@ -50,7 +50,7 @@ function Login() {
     }
 
     try {
-        fetch("http://localhost:8000/signup", {
+        fetch(`${API_URL}/signup`, {
             method: "POST",
             body: formData
         })
