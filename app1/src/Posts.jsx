@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import API_URL from "./config";
 function Posts(){
     const [posts,setPosts]=useState([]);
     const[total,setTotal]=useState(0);

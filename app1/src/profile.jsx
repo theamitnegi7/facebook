@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import API_URL from "./config";
 function Profile(){
     const [profile,setProfile]=useState(null)
     const token = localStorage.getItem("token");

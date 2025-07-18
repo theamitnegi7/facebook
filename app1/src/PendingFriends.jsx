@@ -14,7 +14,7 @@ const PendingFriends = () => {
   const fetchPendingRequests = (page = 1, limit = 3) => {
     const token = localStorage.getItem("token");
 
-    fetch(`${API_Url}/pendingFriends`, {
+    fetch(`${API_URL}/pendingFriends`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ token, page, limit }),

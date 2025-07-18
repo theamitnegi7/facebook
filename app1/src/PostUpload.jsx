@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Posts from './Posts';
+import API_URL from './config';
 
 const PostUpload = () => {
   const [postImage, setPostImage] = useState(null);
