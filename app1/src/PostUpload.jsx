@@ -15,7 +15,7 @@ const PostUpload = () => {
     formData.append("caption", postCaption);
     formData.append("token", token);
 
-    fetch("http://localhost:8000/postSave", {
+    fetch(`${API_Url}/postSave`, {
       method: "POST",
       body: formData
     })

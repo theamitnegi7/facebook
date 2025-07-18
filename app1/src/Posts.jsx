@@ -7,7 +7,7 @@ function Posts(){
     const totalPages = Math.ceil(total / limit);
     function fetchPosts(page=1,limit=5){
         const token=localStorage.getItem("token");
-        fetch("http://localhost:8000/fetchPost", {
+        fetch(`${API_Url}/fetchPost`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({token,page,limit})
@@ -42,7 +42,7 @@ function Posts(){
                     >
                    <img
                         //  src={`/login/${post.post}`}
-                        src={`http://localhost:8000/${post.post}`}
+                        src={`${API_Url}/${post.post}`}
                         className="card-img-top"
                         alt="Post"
                         style={{ maxWidth: "600px", maxHeight: "600px", objectFit: "cover" }}

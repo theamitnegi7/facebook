@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import API_URL from "./config";
 const PendingFriends = () => {
   const [requests, setRequests] = useState([]);
   const [total, setTotal] = useState(0);
@@ -14,7 +14,7 @@ const PendingFriends = () => {
   const fetchPendingRequests = (page = 1, limit = 3) => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8000/pendingFriends", {
+    fetch(`${API_Url}/pendingFriends`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ token, page, limit }),
@@ -34,7 +34,7 @@ const PendingFriends = () => {
   const acceptRequest = async (id) => {
     console.log("accept button");
     try {
-      const res = await fetch("http://localhost:8000/acceptRequest", {
+      const res = await fetch(`${API_Url}/acceptRequest`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),
@@ -53,7 +53,7 @@ const PendingFriends = () => {
   const rejectRequest = async (id) => {
     console.log("reject button");
     try {
-      const res = await fetch("http://localhost:8000/rejectRequest", {
+      const res = await fetch(`${API_Url}/rejectRequest`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),
