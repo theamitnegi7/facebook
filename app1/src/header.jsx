@@ -5,7 +5,7 @@ function Header(){
         <>
           <div className="container-fluid p-5 bg-primary text-white">
         <div className="d-flex  align-items-center justify-content-between">
-          <h1>Facebook</h1>
+          <h1>Netflix</h1>
 
           <nav className="d-flex gap-4 ">
             <NavLink
